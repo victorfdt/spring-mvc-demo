@@ -8,5 +8,9 @@
 </head>
 <body>
 	<h2>Spring MVC Page - Home Page</h2>
+
+	<hr>
+
+	<a href="showForm">Student Form</a>
 </body>
 </html>
