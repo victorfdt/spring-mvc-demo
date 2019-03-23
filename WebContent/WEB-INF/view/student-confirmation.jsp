@@ -9,7 +9,7 @@
 </head>
 <body>
 
-Student ${student.firstName } ${student.lastName }
+Student ${student.firstName } ${student.lastName } ${student.country }
 
 </body>
 </html>

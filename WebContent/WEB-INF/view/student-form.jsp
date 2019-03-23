@@ -22,6 +22,11 @@
 
 		<br>
 
+		<form:select path="country">
+			<form:options items="${countryList}" />
+		</form:select>
+		<br>
+
 		<input type="submit" value="Submit">
 	</form:form>
 
