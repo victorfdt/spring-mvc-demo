@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Spring MVC Page - Home Page</title>
 
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-
-<script
-	src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
+<%@include file="template/header-imports.jsp"%>
 </head>
 <body>
 	<div class="container">
@@ -20,7 +16,7 @@
 
 				<hr>
 
-				<a href="showForm">Student Form</a>
+				<a href="student/showForm">Student Form</a>
 			</div>
 		</div>
 	</div>

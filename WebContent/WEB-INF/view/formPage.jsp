@@ -5,13 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Spring MVC - Form</title>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-
-<script
-	src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
-</head>
-</head>
+<%@include file="template/header-imports.jsp"%>
 <body>
 	<div class="container">
 		<div class="row">
