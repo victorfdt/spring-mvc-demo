@@ -1,5 +1,8 @@
 package com.victorfdt.mvc.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,10 +21,16 @@ public class StudentController {
 	CountryResourceService countryResource;
 
 	private ProgLangResourceService progLangResourceService;
+	
+	private List<String> opSystemList = new ArrayList<>();
 
 	@Autowired
 	public StudentController(ProgLangResourceService progLangResourceService) {
 		this.progLangResourceService = progLangResourceService;
+		
+		this.opSystemList.add("Linux");
+		this.opSystemList.add("Windows");
+		this.opSystemList.add("Mac OS");
 	}
 
 	/**
@@ -41,6 +50,9 @@ public class StudentController {
 
 		// add the programming languages
 		model.addAttribute("progLanguageList", progLangResourceService.data());
+		
+		// add the operating systems
+		model.addAttribute("opSystemList", opSystemList);
 
 		return "student-form";
 	}

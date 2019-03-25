@@ -1,11 +1,15 @@
 package com.victorfdt.mvc.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 
 	private String firstName;
 	private String lastName;
 	private String country;
 	private String progLanguage;
+	private List<String> operatingSystems = new ArrayList<>();
 
 	public String getFirstName() {
 		return firstName;
@@ -39,4 +43,12 @@ public class Student {
 		this.progLanguage = pLanguage;
 	}
 
+	public List<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(List<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
+	
 }

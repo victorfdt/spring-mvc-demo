@@ -50,21 +50,40 @@
 					<!-- Programming languages -->
 					<fieldset class="form-group">
 						<div class="row">
-							<legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+							<legend class="col-form-label col-sm-2 pt-0">Programming
+								Languages</legend>
 							<div class="col-sm-10">
-								<div class="form-check">
 
-									<%-- 
+								<%-- 
 									<form:radiobutton path="progLanguage" value="java"
 										cssClass="form-check-input" />
 									<form:label path="progLanguage" cssClass="form-check-label">Java</form:label>
 									--%>
 
-									<!-- The path is the property in Student model and the items
+								<!-- The path is the property in Student model and the items
 									the collection I added in the Model  -->
-									<form:radiobuttons path="progLanguage"
-										items="${progLanguageList}" />
-								</div>
+								<form:radiobuttons path="progLanguage"
+									items="${progLanguageList}" />
+							</div>
+						</div>
+					</fieldset>
+
+					<!-- Operating systems -->
+					<fieldset class="form-group">
+						<div class="row">
+							<legend class="col-form-label col-sm-2 pt-0">Operating
+								Systems</legend>
+							<div class="col-sm-10">
+
+								<%-- 
+									<form:radiobutton path="progLanguage" value="java"
+										cssClass="form-check-input" />
+									<form:label path="progLanguage" cssClass="form-check-label">Java</form:label>
+									--%>
+
+								<!-- The path is the property in Student model and the items
+									the collection I added in the Model  -->
+								<form:checkboxes path="operatingSystems" items="${opSystemList}" />
 							</div>
 						</div>
 					</fieldset>
