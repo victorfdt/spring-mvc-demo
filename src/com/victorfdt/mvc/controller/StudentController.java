@@ -40,7 +40,7 @@ public class StudentController {
 		model.addAttribute("countryList", countryResource.data());
 
 		// add the programming languages
-		model.addAttribute("progLanguages", progLangResourceService.data());
+		model.addAttribute("progLanguageList", progLangResourceService.data());
 
 		return "student-form";
 	}

@@ -53,9 +53,17 @@
 							<legend class="col-form-label col-sm-2 pt-0">Radios</legend>
 							<div class="col-sm-10">
 								<div class="form-check">
+
+									<%-- 
 									<form:radiobutton path="progLanguage" value="java"
 										cssClass="form-check-input" />
 									<form:label path="progLanguage" cssClass="form-check-label">Java</form:label>
+									--%>
+
+									<!-- The path is the property in Student model and the items
+									the collection I added in the Model  -->
+									<form:radiobuttons path="progLanguage"
+										items="${progLanguageList}" />
 								</div>
 							</div>
 						</div>
