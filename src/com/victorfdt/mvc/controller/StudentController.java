@@ -1,32 +1,20 @@
 package com.victorfdt.mvc.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.victorfdt.mvc.CountryResourceService;
 import com.victorfdt.mvc.entity.Student;
 
 @Controller
 @RequestMapping("/student")
 public class StudentController {
-
-	// List of countries
-	private Map<String, String> countryList = new HashMap<>();
 	
-	@PostConstruct
-	private void init() {
-		// load available countries
-		countryList.put("Brazil", "BRA");
-		countryList.put("China", "CHI");
-		countryList.put("Netherlands", "NLS");
-		countryList.put("United States", "USA");
-	}
+	@Autowired
+	CountryResourceService countryResource;
 
 	/**
 	 * Calls the student form and add a student model
@@ -40,7 +28,7 @@ public class StudentController {
 		model.addAttribute("student", new Student());
 		
 		// add the countryList in the model
-		model.addAttribute("countryList", this.countryList);
+		model.addAttribute("countryList", countryResource.data());
 
 		return "student-form";
 	}
@@ -53,5 +41,4 @@ public class StudentController {
 
 		return "student-confirmation";
 	}
-
 }
