@@ -5,6 +5,7 @@ public class Student {
 	private String firstName;
 	private String lastName;
 	private String country;
+	private String progLanguage;
 
 	public String getFirstName() {
 		return firstName;
@@ -28,6 +29,14 @@ public class Student {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getProgLanguage() {
+		return progLanguage;
+	}
+
+	public void setProgLanguage(String pLanguage) {
+		this.progLanguage = pLanguage;
 	}
 
 }
