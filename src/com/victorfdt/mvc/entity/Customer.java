@@ -3,6 +3,7 @@ package com.victorfdt.mvc.entity;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Customer {
@@ -17,6 +18,9 @@ public class Customer {
 	@Min(value = 0, message = "The value must be greater than or equal to 0.")
 	@Max(value = 10, message = "The value must be less than or equal to 10.")
 	private Integer freePasses;
+
+	@Pattern(regexp = "(NL-)?(\\d{4})\\s*([A-Z]{2})", message = "incorrect format. Ex:5616VD ")
+	private String postCode;
 
 	public String getFirstName() {
 		return firstName;
@@ -40,6 +44,14 @@ public class Customer {
 
 	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
+	}
+
+	public String getPostCode() {
+		return postCode;
+	}
+
+	public void setPostCode(String postCode) {
+		this.postCode = postCode;
 	}
 
 }

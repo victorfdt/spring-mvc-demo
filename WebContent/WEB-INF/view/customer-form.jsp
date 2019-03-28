@@ -54,6 +54,19 @@
 						</div>
 					</div>
 
+					<!-- Post code -->
+					<div class="form-group row">
+						<form:label path="postCode" cssClass="col-sm-2 col-form-label">Post code: </form:label>
+						<div class="col-sm-8">
+							<form:input path="postCode" cssClass="form-control" />
+						</div>
+
+						<div class="col-sm-2">
+							<form:errors path="postCode"
+								cssClass="form-control-plaintext error" />
+						</div>
+					</div>
+
 					<input type="submit" value="Submit">
 
 				</form:form>

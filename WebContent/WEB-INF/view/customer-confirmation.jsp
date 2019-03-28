@@ -20,6 +20,7 @@
 							<th scope="col">First name</th>
 							<th scope="col">Last name</th>
 							<th scope="col">Free passes</th>
+							<th scope="col">Post code</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -28,6 +29,7 @@
 							<td>${customer.firstName }</td>
 							<td>${customer.lastName }</td>
 							<td>${customer.freePasses}</td>
+							<td>${customer.postCode}</td>
 						</tr>
 					</tbody>
 				</table>
