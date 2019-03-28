@@ -1,15 +1,22 @@
 package com.victorfdt.mvc.entity;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class Customer {
 
 	private String firstName;
-	
+
 	@NotNull(message = "is required")
-	@Size(min=1, message = "is required")
+	@Size(min = 1, message = "is required")
 	private String lastName;
+
+	@NotNull(message = "is required")
+	@Min(value = 0, message = "The value must be greater than or equal to 0.")
+	@Max(value = 10, message = "The value must be less than or equal to 10.")
+	private Integer freePasses;
 
 	public String getFirstName() {
 		return firstName;
@@ -23,8 +30,16 @@ public class Customer {
 		return lastName;
 	}
 
-	public void setlastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public Integer getFreePasses() {
+		return freePasses;
+	}
+
+	public void setFreePasses(Integer freePasses) {
+		this.freePasses = freePasses;
 	}
 
 }

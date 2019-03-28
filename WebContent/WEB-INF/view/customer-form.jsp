@@ -36,7 +36,21 @@
 						</div>
 
 						<div class="col-sm-2">
-							<form:errors path="lastName" cssClass="col-form-label error"/>
+							<form:errors path="lastName"
+								cssClass="form-control-plaintext error" />
+						</div>
+					</div>
+
+					<!-- Free passes -->
+					<div class="form-group row">
+						<form:label path="freePasses" cssClass="col-sm-2 col-form-label">Free passes: </form:label>
+						<div class="col-sm-8">
+							<form:input path="freePasses" cssClass="form-control" />
+						</div>
+
+						<div class="col-sm-2">
+							<form:errors path="freePasses"
+								cssClass="form-control-plaintext error" />
 						</div>
 					</div>
 
